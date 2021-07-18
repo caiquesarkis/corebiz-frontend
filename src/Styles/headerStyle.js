@@ -8,7 +8,7 @@ export const Header = styled.div`
     flex-direction:row;
     justify-content: center;
     align-items:center;
-    height:80px;
+    height:5vw;
 `
 
 
@@ -92,6 +92,7 @@ export const MiniCartCounter = styled.div`
     justify-content:center;
     align-items:center;
     margin-left:14px;
+    color:white;
 `
 export const CounterEllipse = styled.div`
     background-color: #F8475F;

@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 /* Banner section */
 export const Banner = styled.div`
-    height:31vh;
+    height:22vw;
+
     width:100%;
 `
 /* Img */
@@ -12,7 +13,7 @@ export const BannerImg = styled.img`
     float: right;
     height:inherit;
     max-height:100%;
-    width: 52.6%;
+    width: 52.6vw;
     
 
 `
@@ -20,7 +21,7 @@ export const BannerImg = styled.img`
 
 
 export const VectorBanner = styled.img`
-    width: 51.2%;
+    width: 51.2vw;
     height:inherit;
     position:absolute;
     z-index:0;
@@ -49,13 +50,13 @@ export const BannerText = styled.div`
 export const SmallText = styled.p`
     font-family: 'Nunito', sans-serif;
     font-weight:bold;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     margin: 0 0 0 20vw;
 ` 
 
 export const BigText = styled.p`
     font-family: 'Nunito', sans-serif;
     font-weight:900;
-    font-size: 2vw;
+    font-size: 2.3vw;
     margin: 0 0 0 20vw;
 ` 

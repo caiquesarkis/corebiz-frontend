@@ -1,6 +1,6 @@
 import * as S from '../Styles/headerStyle'
 
-export default function Header(){
+export default function Header(props){
     return(
         <S.Header>
                 {/* Corebiz Logo */}
@@ -25,7 +25,7 @@ export default function Header(){
                     <S.MiniCartIcon src={'/Assets/Header/mini-cart-icon.png'} />
 
                     <S.MiniCartCounter>
-                        <S.MiniCartCounterText>1</S.MiniCartCounterText>
+                        <S.MiniCartCounterText>{props.count}</S.MiniCartCounterText>
                         <S.CounterEllipse />
                     </S.MiniCartCounter>
                     

@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-export default function Shelf(){
+export default function Shelf(props){
     const [products , setProducts] = useState([]);
     useEffect(() =>{
         axios.get('https://corebiz-test.herokuapp.com/api/v1/products').then(response => {
@@ -27,33 +27,40 @@ export default function Shelf(){
                     {/* Shelf Title */}
                     <S.ShelfTitle>
                         Mais Vendidos
-                        <S.TitelBottonLine/>
+                    <S.TitleBottonLine/>
                     </S.ShelfTitle>
 
                     {/* Shelf Products */}
                     <S.ShelfProducts>
-
+                        {/* Loops through products populating cards. The only exception is the last product that
+                            does not appear on the Figma Layout */}
                         { products.map(product => {
                             const installments = product['installments']
                             let quantity;
+
+                            {/* Verify if the product can be split into smaller installments */}
                             if (installments.length >0){
                                 quantity = installments[0].quantity;
                             }
+                            if (product.productId != 5){
+                                return(
+                                    <S.Product>
+                                        <S.ProductImg src= {product.imageUrl} alt='Product Image'/>
+                                        <S.ProductInfo>
+                                            <S.ProductName>
+                                                {product.productName}
+                                            </S.ProductName>
+                                            
+                                            <S.ProductPrice> por R$ {(product.price/100).toFixed(2)}</S.ProductPrice>
+                                            <S.ProductInstallments>
+                                            {installments.length > 0 ? `ou em ${quantity} x de R$ ${((product.price/100)/quantity).toFixed(2)}` : " "}
+                                            </S.ProductInstallments>
+                                            <S.BuyButton onClick={props.addItem}>Comprar</S.BuyButton>
+                                        </S.ProductInfo>
+                                    </S.Product>
+                                )
+                            }
 
-                            
-                            return(
-                                <S.Product>
-                                    <S.ProductImg src= {product.imageUrl} alt='Product Image'/>
-                                    <S.ProductInfo>
-                                        <p>{product.productName}</p>
-                                        <p>por R$ {(product.price/100).toFixed(2)}</p>
-                                        <p>
-                                        {installments.length > 0 ? `ou em ${quantity} x de ${((product.price/100)/quantity).toFixed(2)}` : " "}
-                                        </p>
-                                        
-                                    </S.ProductInfo>
-                                </S.Product>
-                            )
                         })}
 
                     </S.ShelfProducts>
