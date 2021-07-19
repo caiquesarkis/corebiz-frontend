@@ -17,11 +17,28 @@ export default function Footer(){
             </S.Location>
 
             <S.Contact>
-                
+                <S.Email>                
+                    <img src='/Assets/Footer/email.png' />
+                    <p>ENTRE EM CONTATO</p>
+                </S.Email>
+
+                <S.Consultant>
+
+                    <img src='/Assets/Footer/consultant.png' />
+                    <p>FALE COM O NOSSO <br/> CONSULTOR ONLINE</p>
+                </S.Consultant>
             </S.Contact>
 
             <S.Sponsor>
-                
+                <S.Corebiz>
+                    <p>Created by</p>
+                    <img src='/Assets/Footer/corebiz.png' />
+                </S.Corebiz>
+
+                <S.Vtex>
+                    <p>Powered by</p>
+                    <img src='/Assets/Footer/vtex.png' />
+                </S.Vtex>
             </S.Sponsor>
         </S.FooterContainer>
     )

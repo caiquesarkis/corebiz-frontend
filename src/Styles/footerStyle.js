@@ -45,10 +45,91 @@ export const TitleBottonLine = styled.hr`
     background-color:#C0C0C0;
 `
 
+
+/* Contact */
+
 export const Contact = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+`
+
+export const Email = styled.div`
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+
+    width:10.16vw;
+    height:2vw;
+    border-radius:5px;
+    background-color: white;
+
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight:600;
+    font-size:.625vw;
+    
+    img{
+        margin-right:.9vw;
+    }
+`
+
+export const Consultant = styled.div`
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+
+    width:10.16vw;
+    height:2vw;
+    border-radius:5px;
+
+    margin-top:1.3vw;
+    background-color: white;
+
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight:600;
+    font-size:.625vw;
+
+    img{
+        margin-right:.9vw;
+    }
+`
+
+
+export const Sponsor = styled.div`
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+
+    width:8.24vw;
+    height:1.8vw;
+`
+
+export const Vtex = styled.div`
+
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size:.55vw;
+    p{
+        margin:0;
+    }
 
 `
 
-export const Sponsor = styled.div`
+export const Corebiz = styled.div`
 
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: .55vw;
+    margin-right:1.3vw;
+
+    p{
+        margin:0;
+    }
+    
 `
