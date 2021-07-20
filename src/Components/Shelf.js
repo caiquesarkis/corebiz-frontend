@@ -38,6 +38,8 @@ export default function Shelf(props){
                             const installments = product['installments']
                             let quantity;
 
+                            
+
                             {/* Verify if the product can be split into smaller installments */}
                             if (installments.length >0){
                                 quantity = installments[0].quantity;

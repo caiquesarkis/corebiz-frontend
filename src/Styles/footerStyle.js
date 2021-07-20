@@ -10,6 +10,13 @@ export const FooterContainer = styled.div`
     flex-direction:row;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 600px){
+        height:386px;
+        margin-top:16px;
+
+        flex-direction:column;
+    }
 ` 
 
 
@@ -20,6 +27,11 @@ export const LocationInfo = styled.p`
     font-family: 'Nunito', sans-serif;
     font-weight:400;
     font-size:0.7vw;
+
+    @media (max-width:600px){
+        font-size:13px;
+
+    }
 `
 
 export const LocationTitle = styled.div`
@@ -33,6 +45,11 @@ export const LocationTitle = styled.div`
     display:flex;
     flex-direction: column;
     justity-content: left;
+
+    @media (max-width:600px){
+        font-size:18px;
+
+    }
 `
 
 export const TitleBottonLine = styled.hr`
@@ -43,6 +60,11 @@ export const TitleBottonLine = styled.hr`
     margin-top:0.86vw;
     border:none;
     background-color:#C0C0C0;
+
+    @media (max-width:600px){
+        width:32px;
+
+    }
 `
 
 
@@ -53,6 +75,8 @@ export const Contact = styled.div`
     flex-direction: column;
     justify-content:space-around;
     align-items:center;
+
+
 `
 
 export const Email = styled.div`
@@ -74,6 +98,14 @@ export const Email = styled.div`
     img{
         margin-right:.9vw;
     }
+
+    @media (max-width:600px){
+        width:198px;
+        height:38px;
+
+        font-size:12px;
+        
+    }   
 `
 
 export const Consultant = styled.div`
@@ -97,6 +129,14 @@ export const Consultant = styled.div`
     img{
         margin-right:.9vw;
     }
+
+    @media (max-width:600px){
+        width:198px;
+        height:38px;
+
+        font-size:12px;
+        margin-top:26px;
+    }   
 `
 
 
@@ -108,6 +148,15 @@ export const Sponsor = styled.div`
 
     width:8.24vw;
     height:1.8vw;
+
+    @media (max-width:600px){
+        p{
+            font-size:10px;
+        }
+        width:224px;
+        heigh:32px;
+
+    }   
 `
 
 export const Vtex = styled.div`
@@ -118,6 +167,7 @@ export const Vtex = styled.div`
     p{
         margin:0;
     }
+
 
 `
 
@@ -131,5 +181,5 @@ export const Corebiz = styled.div`
     p{
         margin:0;
     }
-    
+
 `

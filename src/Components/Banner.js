@@ -5,7 +5,7 @@ export default function Banner(){
         <S.Banner>
             <S.BannerText>
                 
-                <S.SmallText>Olá, o que você está buscando?</S.SmallText>
+                <S.SmallText>Olá, o que você está <S.Br/> buscando?</S.SmallText>
                 <S.BigText>Criar ou migrar seu <br/> e-commerce?</S.BigText>
             </S.BannerText>
             <S.VectorBanner src='/Assets/Banner/banner.png'  alt='Vector Banner'/>

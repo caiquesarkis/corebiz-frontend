@@ -11,6 +11,11 @@ export const NewsContainer = styled.div`
     
     height:7.6vw;
     margin-top:3.6vw;
+
+    @media (max-width: 600px){
+        height:276px;
+
+    }
 `
 
 export const NewsForm = styled.div`
@@ -20,14 +25,25 @@ export const NewsForm = styled.div`
     align-items:center;
 
     margin: 0.83vw;
+
+    @media (max-width: 600px){
+        flex-direction: column;
+    }
 ` 
 
 export const Title = styled.h1`
     font-family: 'Lato', sans-serif;
     font-weight:bold;
     font-size:1.15vw;
+    color:#333333;
 
     margin: 1.25vw 0 0 0;
+
+    @media (max-width: 600px){
+        font-size:22px;
+        margin: 24px 0 -3px 16px;
+
+    }
 `
 
 export const TextInput = styled.input`
@@ -41,6 +57,16 @@ export const TextInput = styled.input`
     border:none;
     border-radius:0.26vw;
 
+    @media (max-width: 600px){
+        height:48px;
+        width:288px;
+
+        font-size:12px;
+        border-radius:5px;
+
+        margin-top: 22px;
+
+    }
 
 `
 
@@ -51,7 +77,7 @@ export const SubmitButton = styled.button`
 
     width: 7.3vw;
     height: 2.5vw;
-    margin-left:0.42vw;
+    
     border:none;
     border-radius:0.26vw;
 
@@ -61,5 +87,18 @@ export const SubmitButton = styled.button`
 
     &:hover{
         background-color:#333333;
+    }
+
+
+    @media (max-width: 600px){
+        height:48px;
+        width:288px;
+
+        font-size:14px;
+        border-radius:5px;
+
+        margin-top:7px;
+
+
     }
 `

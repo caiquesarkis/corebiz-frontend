@@ -3,12 +3,29 @@ import styled from 'styled-components'
 
 /* Header section */
 
+export const  Sandwich = styled.img`
+    visibility:hidden;
+
+    @media (max-width: 600px){
+        position:absolute;
+        visibility:visible;
+        margin: 15px 0 0 20px;
+    }
+`
+
+
 export const Header = styled.div`
     display:flex;
     flex-direction:row;
     justify-content: center;
     align-items:center;
     height:5vw;
+
+
+    @media (max-width: 600px){
+        display:block; 
+        height:80px;
+    }
 `
 
 
@@ -17,6 +34,15 @@ export const Header = styled.div`
 export const CorebizLogo = styled.img`
     width:181px;
     height:41px;
+
+    @media (max-width:600px){
+        width:109px;
+        height:25px;
+        margin-top:7px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
 `
 
 
@@ -38,6 +64,16 @@ export const Busca = styled.div`
     p{
         color:#7A7A7A;
     }
+
+    @media (max-width:600px){
+        width:280px;
+        height:22px;
+        position: absolute;
+        margin: 47px 0 0 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
 `
 
 export const SearchText = styled.p`
@@ -55,6 +91,10 @@ export const Login = styled.div`
     margin-left:43px;
     display:flex;
     flex-direction:row;
+
+    @media (max-width:600px){
+        display:none;
+    }
 
 `
 
@@ -76,6 +116,14 @@ export const MiniCart = styled.div`
     margin-left:21px;
     display:flex;
     flex-direction:row;
+
+
+    @media (max-width:600px){
+
+        position: absolute;
+        margin: 15px 0 0 263px;
+
+    }
 
 
 `
