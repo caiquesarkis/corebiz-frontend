@@ -136,6 +136,47 @@ export const NameErrorMsg = styled.p`
     }
 `
 
-export const ErrorGroup = styled.div`
+export const SuccessContainer = styled.div`
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+`
 
+export const SuccessTitle = styled.p`
+    font-family: 'Lato' , sans-serif;
+    font-weight:900;
+    font-size:0.73vw;
+    color:black;
+    margin-bottom:0;
+    margin-top:1.7vw;
+
+`
+
+export const SuccessSubTitle = styled.p`
+    font-family: 'Lato' , sans-serif;
+    font-size:0.625vw;
+    color:#333333;
+    margin-top:0;
+
+`
+
+export const SuccessButton = styled.button`
+    background-color:black;
+    width:17.08vw;
+    height: 2.5vw;
+
+    border:none;
+    border-radius:5px;
+
+    font-family: 'Lato' , sans-serif;
+    font-weight:900;
+    font-size:0.73vw;
+    color: white;
+
+    margin:none;
+
+    &:hover{
+        background-color:#333333;
+    }
 `

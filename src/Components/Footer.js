@@ -18,13 +18,13 @@ export default function Footer(){
 
             <S.Contact>
                 <S.Email>                
-                    <img src='/Assets/Footer/email.png' />
+                    <img src='/Assets/Footer/email.png' alt="Email"/>
                     <p>ENTRE EM CONTATO</p>
                 </S.Email>
 
                 <S.Consultant>
 
-                    <img src='/Assets/Footer/consultant.png' />
+                    <img src='/Assets/Footer/consultant.png' alt="Consultant"/>
                     <p>FALE COM O NOSSO <br/> CONSULTOR ONLINE</p>
                 </S.Consultant>
             </S.Contact>
@@ -32,12 +32,12 @@ export default function Footer(){
             <S.Sponsor>
                 <S.Corebiz>
                     <p>Created by</p>
-                    <img src='/Assets/Footer/corebiz.png' />
+                    <img src='/Assets/Footer/corebiz.png' alt="Created" />
                 </S.Corebiz>
 
                 <S.Vtex>
                     <p>Powered by</p>
-                    <img src='/Assets/Footer/vtex.png' />
+                    <img src='/Assets/Footer/vtex.png' alt="Powered" />
                 </S.Vtex>
             </S.Sponsor>
         </S.FooterContainer>

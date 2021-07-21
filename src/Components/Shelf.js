@@ -12,7 +12,6 @@ export default function Shelf(props){
         
         if (data != null){
             setProducts(data)
-            console.log(data)
         }
     })
     
@@ -46,15 +45,15 @@ export default function Shelf(props){
                             if (installments.length >0){
                                 quantity = installments[0].quantity;
                             }
-                            if (product.productId != 5){
+                            if (product.productId !== 5){
                                 return(
                                     <S.Product>
-                                        <S.ProductImg src= {product.imageUrl} alt='Product Image'/>
+                                        <S.ProductImg src= {product.imageUrl} alt={`Product ${product.productId} Image`}/>
                                         <S.ProductInfo>
                                             <S.ProductHeader>
                                                 <S.ProductName>{product.productName}</S.ProductName>
 
-                                                <S.Rating src= {`/Assets/Prateleira/stars(${product.stars}).svg`} alt="Product rating" />
+                                                <S.Rating src= {`/Assets/Prateleira/stars(${product.stars}).svg`} alt={`${product.stars} stars product`} />
 
                                                 <S.ListPrice>
                                                     {product.listPrice != null ? `de R$ ${product.listPrice/100}` : "  "}

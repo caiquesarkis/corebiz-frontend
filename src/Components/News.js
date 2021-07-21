@@ -5,6 +5,8 @@ import axios from "axios"
 
 export default function News(props){
 
+    const [ validForm , setValidForm] = useState(false);
+
     const [name , setName ] = useState("");
     const [ nameErro, setNameErro ] = useState(false);
 
@@ -13,9 +15,9 @@ export default function News(props){
 
     
     function sendEmail(){
-        if (name == ""){
+        if (name === ""){
             setEmailErro(true);
-            setNameErro(true)
+            setNameErro(true);
         }else{
             const info = {
                 name : name,
@@ -25,46 +27,64 @@ export default function News(props){
                 console.log(response)
             }).catch( err => {
                 setEmailErro(true);
-                setNameErro(true)
+                setNameErro(true);
             })
+
+            setValidForm(true)
         }
+
+
         
     }
 
     function handleName(e){
         setName(e.target.value)
-        console.log(name)
     }
 
     function handleEmail(e){
         setEmail(e.target.value)
-        console.log(email)
+    }
+
+    function reset(){
+        setValidForm(false)
     }
     return(
         <S.NewsContainer>
-            <S.Title>
+
+            {!validForm ? <S.Title>
                 Participe de nossas news com promoções e novidades!
             </S.Title>
-            <S.NewsForm>
-                <S.ErrorGroup>
-                    <S.TextInput placeholder='Digite seu nome' type="text" name="name" value={name}  onChange={handleName}/>
-                    { nameErro ? <S.NameErrorMsg>Preencha com seu nome completo</S.NameErrorMsg> : ''}
-                </S.ErrorGroup>
+            : ""
+            }
 
-                <S.ErrorGroup>
-                    <S.TextInput placeholder='Digite seu email' type="email" inputmode="email" name="email" autocomplete="username" value={email} onChange={handleEmail}/>          
-                    { emailErro ? <S.EmailErrorMsg>Preencha com um email válido</S.EmailErrorMsg> : ''}
-                </S.ErrorGroup>
+            { !validForm ?  <S.NewsForm>
+                
+                <S.TextInput placeholder='Digite seu nome' type="text" name="name" value={name}  onChange={handleName}/>
+                { nameErro ? <S.NameErrorMsg>Preencha com seu nome completo</S.NameErrorMsg> : ''}
+            
+
+            
+                <S.TextInput placeholder='Digite seu email' type="email" inputmode="email" name="email" autocomplete="username" value={email} onChange={handleEmail}/>          
+                { emailErro ? <S.EmailErrorMsg>Preencha com um email válido</S.EmailErrorMsg> : ''}
+                
                 
                 <S.SubmitButton type="button" onClick={sendEmail}>Eu quero!</S.SubmitButton>
-
-                
-
-                
-
             </S.NewsForm>
-            
+            : ""
+            }
+
+            { validForm ? 
+            <S.SuccessContainer>
+                <>
+                <S.SuccessTitle>Seu e-mail foi cadastrado com sucesso!</S.SuccessTitle>
+                <S.SuccessSubTitle>A partir de agora você receberá as novidade e ofertas exclusivas.</S.SuccessSubTitle>
+                </>
                 
+                <S.SuccessButton onClick={reset}>Cadastrar novo e-mail</S.SuccessButton>
+            </S.SuccessContainer>
+            
+            : ""}
+                 
 
         </S.NewsContainer>
         
