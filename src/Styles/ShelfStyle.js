@@ -18,7 +18,7 @@ export const ShelfContainer = styled.div`
     display:flex;
     flex-direction: row;
     max-width:1vw;
-    height:36vw;
+    margin-bottom:3.6vw;
 
 `
 
@@ -31,19 +31,28 @@ export const ShelfProducts = styled.div`
 
 export const ProductImg = styled.img`
     width:auto;
-    height:57%;
+    height:10.41vw;
+
+    @media (max-width:600px){
+        height:122px;
+    }
 `
 export const ProductInfo = styled.div`
     background-color:white;
     display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
     text-align:center
 
-    height:7.97vw;
+    height:153px;
 `
 
+export const ProductHeader = styled.div`
+    height:53px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+` 
 
 export const ProductName = styled.p`
     font-family:'Nunito' , sans-serif;
@@ -51,14 +60,37 @@ export const ProductName = styled.p`
     font-size:.625vw;
     color: #7A7A7A;
 
-    margin-top:0.36vw;
+    margin:7px 0 0 0;
 
-    height:2.76vw;
 
+    
     @media (max-width: 600px){
         font-size:10px;
     }
+
+
+
+
 `
+
+export const Rating = styled.img`
+    margin-top:4.65px;
+
+`
+
+export const ListPrice = styled.p`
+    font-family:'Nunito' , sans-serif;
+    font-size:.625vw;
+    color: #7A7A7A;
+
+    margin-top: .36vw;
+
+
+
+    @media (max-width: 600px){
+        font-size:11px;
+    }
+` 
 
 
 export const ProductPrice = styled.p`
@@ -67,7 +99,7 @@ export const ProductPrice = styled.p`
     font-size:.9375vw;
     color: black;
 
-    margin-bottom:0.21vw;
+   
 
     @media (max-width: 600px){
         font-size:16px;
@@ -80,7 +112,7 @@ export const ProductInstallments = styled.p`
     font-size:.9375vw;
     color: #7A7A7A;
 
-    margin:0 0 0.42vw 0;
+    margin:0;
 
     @media (max-width: 600px){
         font-size:11px;
@@ -91,7 +123,9 @@ export const BuyButton = styled.button`
     width:6.525vw;
     height:1.69vw;
 
-    margin-bottom:0.75vw;
+    margin-bottom:.75vw;
+    margin-top:0;
+
 
     background-color:black;
     border:none;
@@ -128,6 +162,8 @@ export const Product = styled.div`
 
     display:flex;
     flex-direction: column;
+    
+
 
     &:hover{
         cursor:pointer;
@@ -193,7 +229,8 @@ export const ShelfTitle = styled.div`
 export const TitleBottonLine = styled.hr`
     width:3.3vw;
     height:4.3px;
-    margin:0 0 14.67px 0;
+
+    margin:0;
     border:none;
     background-color:#C0C0C0;
 

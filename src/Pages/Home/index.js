@@ -6,18 +6,22 @@ import Footer from '../../Components/Footer'
 
 import { useState } from 'react'
 
+
 export default function Home(){
 
-    if (!localStorage.getItem('count')){
-        localStorage.setItem('count','0')
+
+    if (!sessionStorage.getItem('count')){
+        sessionStorage.setItem('count','0')
 
     }
-    const [count , setCount] = useState(localStorage.getItem('count'));
+    const [count , setCount] = useState(sessionStorage.getItem('count'));
     function addItem(){
 
-        localStorage.setItem('count',JSON.stringify(parseInt(localStorage.getItem('count')) + 1))
-        setCount(localStorage.getItem('count'))
+        sessionStorage.setItem('count',JSON.stringify(parseInt(sessionStorage.getItem('count')) + 1))
+        setCount(sessionStorage.getItem('count'))
     }
+
+    
     
     return(
         <>
@@ -25,7 +29,7 @@ export default function Home(){
             <Header count={count}/>
             <Banner/>
             <Shelf addItem={addItem}/>
-            <News/>
+            <News  />
             <Footer/>
             
         </>

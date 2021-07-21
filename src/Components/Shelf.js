@@ -20,15 +20,17 @@ export default function Shelf(props){
    
     return(
         <S.ShelfSection>
+             {/* Shelf Title */}
+             <S.ShelfTitle>
+                Mais Vendidos
+                
+            </S.ShelfTitle>
+            <S.TitleBottonLine/>
             <S.ShelfContainer>
                 <S.LeftArrow src='/Assets/Prateleira/left-arrow.png'  alt="Left Arrow"/>
                 <S.Shelf>
 
-                    {/* Shelf Title */}
-                    <S.ShelfTitle>
-                        Mais Vendidos
-                    <S.TitleBottonLine/>
-                    </S.ShelfTitle>
+                   
 
                     {/* Shelf Products */}
                     <S.ShelfProducts>
@@ -49,9 +51,20 @@ export default function Shelf(props){
                                     <S.Product>
                                         <S.ProductImg src= {product.imageUrl} alt='Product Image'/>
                                         <S.ProductInfo>
-                                            <S.ProductName>
-                                                {product.productName}
-                                            </S.ProductName>
+                                            <S.ProductHeader>
+                                                <S.ProductName>{product.productName}</S.ProductName>
+
+                                                <S.Rating src= {`/Assets/Prateleira/stars(${product.stars}).svg`} alt="Product rating" />
+
+                                                <S.ListPrice>
+                                                    {product.listPrice != null ? `de R$ ${product.listPrice/100}` : "  "}
+                                                </S.ListPrice>
+                                            </S.ProductHeader>
+                                            
+                                            
+                                            
+
+                                            
                                             
                                             <S.ProductPrice> por R$ {(product.price/100).toFixed(2)}</S.ProductPrice>
                                             <S.ProductInstallments>

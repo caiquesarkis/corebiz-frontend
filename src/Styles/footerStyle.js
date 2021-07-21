@@ -96,7 +96,7 @@ export const Email = styled.div`
     font-size:.625vw;
     
     img{
-        margin-right:.9vw;
+        margin-right:20.7px;
     }
 
     @media (max-width:600px){
@@ -127,7 +127,7 @@ export const Consultant = styled.div`
     font-size:.625vw;
 
     img{
-        margin-right:.9vw;
+        margin-right:20.7px;
     }
 
     @media (max-width:600px){

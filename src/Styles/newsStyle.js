@@ -10,7 +10,9 @@ export const NewsContainer = styled.div`
     background-color:#F2F2F2;
     
     height:7.6vw;
-    margin-top:3.6vw;
+
+    
+
 
     @media (max-width: 600px){
         height:276px;
@@ -18,7 +20,7 @@ export const NewsContainer = styled.div`
     }
 `
 
-export const NewsForm = styled.div`
+export const NewsForm = styled.form`
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -81,6 +83,8 @@ export const SubmitButton = styled.button`
     border:none;
     border-radius:0.26vw;
 
+    margin-left:8px;
+
     font-family: 'Lato' , sans-serif;
     font-weight:bold;
     font-size:0.73vw;
@@ -101,4 +105,37 @@ export const SubmitButton = styled.button`
 
 
     }
+`
+export const EmailErrorMsg = styled.p`
+    position:absolute;
+    margin:0;
+    font-family: "Lato" , sans-serif;
+    font-size: .625vw;
+    color:#D7182A;
+
+    margin-left:.425vw;
+    margin-top:.42vw;
+
+    @media (max-width: 600px){
+        display:none;
+    }
+`
+
+export const NameErrorMsg = styled.p`
+    position:absolute;  
+    margin:0;
+    font-family: "Lato" , sans-serif;
+    font-size: .625vw;
+    color:#D7182A;
+
+    margin-left:.425vw;
+    margin-top:.42vw;
+
+    @media (max-width: 600px){
+        display:none;
+    }
+`
+
+export const ErrorGroup = styled.div`
+
 `
