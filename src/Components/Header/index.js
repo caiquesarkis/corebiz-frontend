@@ -1,40 +1,29 @@
-import * as S from './style'
+import './style.global.css'
 
 export default function Header(props){
     return(
-        <S.Header>
-                {/* Sandwhich icon */}
-                <S.Sandwich src= '/Assets/Header/sandwich.svg'/>
+        <section id="header-section">
+                <img id="header-sandwhich-icon" src= '/Assets/Header/sandwich.svg'/>
 
-
-                {/* Corebiz Logo */}
-                <S.CorebizLogo src='/Assets/Header/corebiz-logo.svg' alt='Corebiz Logo'/>
+                <img id="header-corebiz-logo" src='/Assets/Header/corebiz-logo.svg' alt='Corebiz Logo'/>
 
                 {/* Search for produtcs */}
-                <S.Busca>
-                    <S.SearchText>O que está procurando?</S.SearchText>
-                    <S.SearchIcon src='/Assets/Header/search-icon.png'/>
-                </S.Busca>
-
-                {/* Fake login button */}
-                <S.Login>
-                    <S.LoginIcon src='/Assets/Header/login-icon.png'/>
-                    <S.LoginText>Minha Conta</S.LoginText>
-
-                    
-                </S.Login>
+                {/* This div should be a input */}
+                
+                <button id="header-login-button">
+                    <img id="header-login-button-icon" src='/Assets/Header/login-icon.png'/>
+                    <p id="header-login-button-text">Minha Conta</p>
+                </button>
 
                 {/* MiniCart icon and counter */}
-                <S.MiniCart>
-                    <S.MiniCartIcon src='/Assets/Header/mini-cart-icon.png' />
+                <div id="header-mini-cart-container">
+                    <img id="header-mini-cart-icon" src='/Assets/Header/mini-cart-icon.png' />
 
-                    <S.MiniCartCounter>
-                        <S.MiniCartCounterText>{props.count}</S.MiniCartCounterText>
-                        <S.CounterEllipse />
-                    </S.MiniCartCounter>
-                    
-                </S.MiniCart>
-
-            </S.Header>
+                    <div id="header-mini-cart-counter-container">
+                        <p id="header-mini-cart-counter-text">{props.count}</p>
+                        <div id="header-mini-cart-counter-circle" />
+                    </div>
+                </div>
+            </section>
     )
 }
