@@ -1,0 +1,46 @@
+#banner-section{
+    height:22vw;
+    width:100%;
+    
+}
+
+#banner-text-container{
+    color:white;
+    position:absolute;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:inherit;
+    z-index:1;
+}
+
+#banner-small-text{
+    font-family: 'Nunito', sans-serif;
+    font-weight:bold;
+    font-size: 1.6vw;
+    margin: 0 0 0 20vw;
+}
+
+#banner-big-text{
+    font-family: 'Nunito', sans-serif;
+    font-weight:900;
+    font-size: 2.3vw;
+    margin: 0 0 0 20vw;
+}
+
+#banner-vector{
+    width: 51.2vw;
+    height:inherit;
+    position:absolute;
+    z-index:0;
+    max-height:100%;
+}
+
+#banner-image{
+    display:block;
+    float: right;
+    height:inherit;
+    max-height:100%;
+    width: 52.6vw;
+}

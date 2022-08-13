@@ -1,19 +1,16 @@
+import { useState } from 'react'
 import Header from '../../Components/Header'
 import Banner from '../../Components/Banner'
 import Shelf from '../../Components/Shelf'
 import News from '../../Components/News'
 import Footer from '../../Components/Footer'
 
-import { useState } from 'react'
-
-
 export default function Home(){
-
-
     if (!sessionStorage.getItem('count')){
         sessionStorage.setItem('count','0')
 
     }
+
     const [count , setCount] = useState(sessionStorage.getItem('count'));
     function addItem(){
 
@@ -21,17 +18,13 @@ export default function Home(){
         setCount(sessionStorage.getItem('count'))
     }
 
-    
-    
     return(
-        <>
-            
+        <section>
             <Header count={count}/>
             <Banner/>
             <Shelf addItem={addItem}/>
             <News  />
             <Footer/>
-            
-        </>
+        </section>
     )
 }

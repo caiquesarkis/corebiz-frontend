@@ -1,0 +1,112 @@
+#footer-section{
+    height:11.09vw;
+    background-color:black;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer-location{
+
+}
+
+#footer-location-title{
+    font-family: 'Nunito', sans-serif;
+    font-weight:900;
+    font-size:1.04vw;
+    color:white;
+    margin-top:1.3vw;
+    display:flex;
+    flex-direction: column;
+    justity-content: left;
+}
+
+.footer-divider{
+    width:3.3vw;
+    height:4.3px;
+    margin:0;
+    margin-top:0.86vw;
+    border:none;
+    background-color:#C0C0C0;
+}
+
+#footer-location-info{
+    font-family: 'Nunito', sans-serif;
+    font-weight:400;
+    font-size:0.7vw;
+}
+
+#footer-location-title{
+
+}
+
+#footer-contact{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+}
+
+#footer-contact-email{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    width:10.16vw;
+    height:2vw;
+    border-radius:5px;
+    background-color: white;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight:600;
+    font-size:.625vw;
+}
+
+#footer-contact-consultant{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+
+    width:10.16vw;
+    height:2vw;
+    border-radius:5px;
+
+    margin-top:1.3vw;
+    background-color: white;
+
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight:600;
+    font-size:.625vw;
+}
+
+
+#footer-contact-email img,
+#footer-contact-consultant img{
+ margin-right: 20.7px;
+}
+
+#footer-sponsor{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+
+    width:8.24vw;
+    height:1.8vw;
+}
+
+#footer-sponsor-corebiz{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: .55vw;
+    margin-right:1.3vw
+}
+
+#footer-sponsor-vtex{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size:.55vw;
+}

@@ -1,4 +1,4 @@
-import * as S from '../Styles/headerStyle'
+import * as S from './style'
 
 export default function Header(props){
     return(

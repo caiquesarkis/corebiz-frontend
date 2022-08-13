@@ -1,4 +1,4 @@
-import * as S from '../Styles/ShelfStyle';
+import * as S from './style';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 

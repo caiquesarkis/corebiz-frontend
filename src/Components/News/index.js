@@ -1,4 +1,4 @@
-import * as S from '../Styles/newsStyle'
+import * as S from './style'
 
 import { useState } from 'react'
 import axios from "axios"
