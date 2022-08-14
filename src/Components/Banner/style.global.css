@@ -1,10 +1,22 @@
-#banner-section{
-    height:22vw;
-    width:100%;
-    
+
+
+#banner-section .slick-dots{
+    bottom: 13px;
+}
+
+#banner-section .slick-dots li button:before{
+    color:#BDBDBD;
+    height:10px;
+    width:10px;
+}
+
+#banner-section .slick-dots li.slick-active  button:before{
+    color:#F8475F;
 }
 
 #banner-text-container{
+    top: 154px;
+    margin-left: 20vw;
     color:white;
     position:absolute;
     text-align:left;
@@ -18,29 +30,77 @@
 #banner-small-text{
     font-family: 'Nunito', sans-serif;
     font-weight:bold;
-    font-size: 1.6vw;
-    margin: 0 0 0 20vw;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
 }
 
 #banner-big-text{
     font-family: 'Nunito', sans-serif;
     font-weight:900;
-    font-size: 2.3vw;
-    margin: 0 0 0 20vw;
+    font-size: 45px;
+    margin: 0;
 }
 
 #banner-vector{
     width: 51.2vw;
-    height:inherit;
+    height:430px;
     position:absolute;
     z-index:0;
     max-height:100%;
 }
 
 #banner-image{
+    object-fit: cover;
     display:block;
     float: right;
-    height:inherit;
+    height:430px;
     max-height:100%;
     width: 52.6vw;
+}
+
+
+@media (max-width: 1450px) {
+    #banner-text-container{
+        margin-left: 5vw;
+    }
+}
+@media (max-width:1280px) {
+    #banner-vector{
+        display: none;
+    }
+
+    #banner-small-text{
+        font-size: 25px;
+    }
+
+    #banner-big-text{
+        font-size: 35px;
+    }
+    
+    #banner-image{
+        width:100%;
+        -webkit-filter: blur(1px) brightness(0.5);
+        -moz-filter: blur(1px) brightness(0.5);
+        -ms-filter: blur(1px) brightness(0.5);
+        -o-filter: blur(1px) brightness(0.5);
+        filter: blur(1px) brightness(0.5);
+    }
+}
+
+@media (max-width: 920px) {
+    #banner-text-container{
+        padding: 0 12px;
+    }
+
+    #banner-section .slick-dots li button:before{
+        width:50px;
+        height:50px;
+    }
+}
+
+@media (max-width: 550px) {
+    #banner-text-container{
+        margin-left: 0;
+    }
 }
