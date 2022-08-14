@@ -8,8 +8,11 @@ export default function Header(props){
                 <img id="header-corebiz-logo" src='/Assets/Header/corebiz-logo.svg' alt='Corebiz Logo'/>
 
                 {/* Search for produtcs */}
-                {/* This div should be a input */}
-                
+                <div id="header-search-container">
+                    <input id="header-search-input" placeholder="O que está procurando?" type="text"></input>
+                    <img id="header-search-icon" src='/Assets/Header/search-icon.png'/>
+                </div>
+
                 <button id="header-login-button">
                     <img id="header-login-button-icon" src='/Assets/Header/login-icon.png'/>
                     <p id="header-login-button-text">Minha Conta</p>
