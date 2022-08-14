@@ -1,4 +1,4 @@
-import * as S from './style';
+import './style.global.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -14,17 +14,16 @@ export default function Shelf(props){
     },[])
    
     return(
-        <S.ShelfSection>
+        <section id="shelf-section">
              {/* Shelf Title */}
-             <S.ShelfTitle>
+             <h2 id="shelf-title">
                 Mais Vendidos
-            </S.ShelfTitle>
-            <S.TitleBottonLine/>
-            <S.ShelfContainer>
-                <S.LeftArrow src='/Assets/Prateleira/left-arrow.png'  alt="Left Arrow"/>
-                <S.Shelf>
+            </h2>
+            <hr className="shelf-divider"/>
+            <div id="shelf-wrapper">
+                <img id="shelf-right-arrow" src='/Assets/Prateleira/left-arrow.png'  alt="Left Arrow"/>
                     {/* Shelf Products */}
-                    <S.ShelfProducts>
+                    <div id="shelf-products">
                         {/* Loops through products populating cards. The only exception is the last product that
                             does not appear on the Figma Layout */}
                         { products.map(product => {
@@ -37,35 +36,34 @@ export default function Shelf(props){
                             }
                             if (product.productId !== 5){
                                 return(
-                                    <S.Product>
-                                        <S.ProductImg src= {product.imageUrl} alt={`Product ${product.productId} Image`}/>
-                                        <S.ProductInfo>
-                                            <S.ProductHeader>
-                                                <S.ProductName>{product.productName}</S.ProductName>
+                                    <div id="shelf-product">
+                                        <img id="shelf-product-image" src= {product.imageUrl} alt={`Product ${product.productId} Image`}/>
+                                        <div id="shelf-product-info">
+                                            <div id="shelf-product-header">
+                                                <p id="shelf-product-name">{product.productName}</p>
 
-                                                <S.Rating src= {`/Assets/Prateleira/stars(${product.stars}).svg`} alt={`${product.stars} stars product`} />
+                                                <img id="shelf-product-rating" src= {`/Assets/Prateleira/stars(${product.stars}).svg`} alt={`${product.stars} stars product`} />
 
-                                                <S.ListPrice>
+                                                <p id="shelf-product-list-price">
                                                     {product.listPrice != null ? `de R$ ${product.listPrice/100}` : "  "}
-                                                </S.ListPrice>
-                                            </S.ProductHeader>
+                                                </p>
+                                            </div>
                                            
-                                            <S.ProductPrice> por R$ {(product.price/100).toFixed(2)}</S.ProductPrice>
-                                            <S.ProductInstallments>
+                                            <p id="shelf-product-price"> por R$ {(product.price/100).toFixed(2)}</p>
+                                            <p id="shelf-product-installments">
                                             {installments.length > 0 ? `ou em ${quantity} x de R$ ${((product.price/100)/quantity).toFixed(2)}` : " "}
-                                            </S.ProductInstallments>
-                                            <S.BuyButton onClick={props.addItem}>Comprar</S.BuyButton>
-                                        </S.ProductInfo>
-                                    </S.Product>
+                                            </p>
+                                            <button id="shelf-product-buy-button" onClick={props.addItem}>Comprar</button>
+                                        </div>
+                                    </div>
                                 )
                             }
 
                         })}
-                    </S.ShelfProducts>
-                </S.Shelf>
-                <S.RightArrow src='/Assets/Prateleira/right-arrow.png'  alt="Right Arrow"/>
-            </S.ShelfContainer>
-        </S.ShelfSection>
+                    </div>
+                <img id="shelf-left-arrow" src='/Assets/Prateleira/right-arrow.png'  alt="Right Arrow"/>
+            </div>
+        </section>
         
     )
 }

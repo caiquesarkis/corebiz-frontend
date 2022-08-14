@@ -1,0 +1,122 @@
+#shelf-section{
+    display:block;
+    margin-left:17.5vw;
+    margin-right:17.5vw;
+}
+
+#shelf-title{
+    font-family: 'Nunito', sans-serif;
+    font-weight:900;
+    font-size:20px;
+    margin-top:1.3vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.shelf-divider{
+    width:3.3vw;
+    height:4.3px;
+    margin:0;
+    border:none;
+    background-color:#C0C0C0; 
+}
+
+#shelf-wrapper{
+    display:flex;
+    flex-direction: row;
+    margin-bottom:3.6vw;
+}
+
+#shelf-left-arrow{
+    object-fit: none;
+    position: absolute;
+    align-self: center;
+    margin-left: -26px;
+}
+
+#shelf-right-arrow{
+    object-fit: none;
+    position: absolute;
+    align-self: center;
+    margin-left: -26px;
+}
+
+#shelf-products{
+    display:flex;
+    flex-direction:row;
+    margin-top:1.45vw;
+    justify-content:space-between;
+    gap: 100px;
+}
+
+#shelf-product-image{
+    width:auto;
+    height:10.41vw;
+}
+
+#shelf-product-info{
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    height:153px;
+}
+
+#shelf-product-header{
+    height:53px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#shelf-product-name{
+    font-family:'Nunito' , sans-serif;
+    font-weight:600;
+    font-size:.625vw;
+    color: #7A7A7A;
+    margin:7px 0 0 0;
+}
+
+#shelf-product-rating{
+    margin-top:4.65px;
+}
+
+#shelf-product-list-price{
+    font-family:'Nunito' , sans-serif;
+    font-size:.625vw;
+    color: #7A7A7A;
+    margin-top: .36vw;
+}
+
+#shelf-product-price{
+    font-family:'Nunito' , sans-serif;
+    font-weight:900;
+    font-size:.9375vw;
+    color: black;
+}
+
+#shelf-product-installments{
+    font-family:'Nunito' , sans-serif;
+    font-weight:regular;
+    font-size:.9375vw;
+    color: #7A7A7A;
+    margin:0;
+}
+
+#shelf-product-buy-button{
+    width:6.525vw;
+    height:1.69vw;
+    margin-bottom:.75vw;
+    margin-top:0;
+    background-color:black;
+    border:none;
+    border-radius:0.26vw;
+    visibility:hidden;
+    color:white;
+}
+
+#shelf-product-buy-button:hover{
+    background-color:#444444;
+}

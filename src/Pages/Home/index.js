@@ -19,12 +19,12 @@ export default function Home(){
     }
 
     return(
-        <section>
+        <>
             <Header count={count}/>
             <Banner/>
             <Shelf addItem={addItem}/>
             <News  />
             <Footer/>
-        </section>
+        </>
     )
 }

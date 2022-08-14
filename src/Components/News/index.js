@@ -1,5 +1,4 @@
-import * as S from './style'
-
+import './style.global.css'
 import { useState } from 'react'
 import axios from "axios"
 
@@ -13,9 +12,10 @@ export default function News(props){
     
     function sendEmail(){
         if (name === ""){
-            setEmailErro(true);
             setNameErro(true);
-        }else{
+        }if (email === "") {
+            setEmailErro(true);
+        } else{
             const info = {
                 name : name,
                 email : email
@@ -43,35 +43,39 @@ export default function News(props){
         setValidForm(false)
     }
     return(
-        <S.NewsContainer>
-            {!validForm ? <S.Title>
+        <section id="news-section">
+            {!validForm ? <h1 id="news-title">
                 Participe de nossas news com promoções e novidades!
-            </S.Title>
+            </h1>
             : <></>
             }
 
-            { !validForm ?  <S.NewsForm>
-                <S.TextInput placeholder='Digite seu nome' type="text" name="name" value={name}  onChange={handleName}/>
-                { nameErro ? <S.NameErrorMsg>Preencha com seu nome completo</S.NameErrorMsg> : ''}
-          
-                <S.TextInput placeholder='Digite seu email' type="email" inputmode="email" name="email" autocomplete="username" value={email} onChange={handleEmail}/>          
-                { emailErro ? <S.EmailErrorMsg>Preencha com um email válido</S.EmailErrorMsg> : ''}
-               
-                <S.SubmitButton type="button" onClick={sendEmail}>Eu quero!</S.SubmitButton>
-            </S.NewsForm>
+            { !validForm ?  
+            <form id="news-form">
+                <div>
+                    <input className={`news-input ${nameErro? "input-error": ""}`} placeholder='Digite seu nome' type="text" name="name" value={name}  onChange={handleName}/>
+                    { nameErro ? <p className="news-error-text">Preencha com seu nome completo</p> : ''}
+                </div>
+                <div>
+                    <input className={`news-input ${emailErro? "input-error": ""}`} placeholder='Digite seu email' type="email" inputmode="email" name="email" autocomplete="username" value={email} onChange={handleEmail}/>          
+                    { emailErro ? <p className="news-error-text">Preencha com um email válido</p> : ''}
+                </div>
+              
+                <button id="news-form-submit-button" type="button" onClick={sendEmail}>Eu quero!</button>
+            </form>
             : <></> 
             }
 
             { validForm ? 
-            <S.SuccessContainer>
+            <div id="news-success-container">
                 <>
-                    <S.SuccessTitle>Seu e-mail foi cadastrado com sucesso!</S.SuccessTitle>
-                    <S.SuccessSubTitle>A partir de agora você receberá as novidade e ofertas exclusivas.</S.SuccessSubTitle>
+                    <p id="news-success-title">Seu e-mail foi cadastrado com sucesso!</p>
+                    <p id="news-success-subtitle">A partir de agora você receberá as novidade e ofertas exclusivas.</p>
                 </>
-                <S.SuccessButton onClick={reset}>Cadastrar novo e-mail</S.SuccessButton>
-            </S.SuccessContainer>
+                <button id="news-success-button" onClick={reset}>Cadastrar novo e-mail</button>
+            </div>
             : <></>}
-        </S.NewsContainer>
+        </section>
         
     )
 }
