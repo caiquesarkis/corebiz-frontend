@@ -17,7 +17,7 @@ export default function Footer(){
             </div>
 
             <div id="footer-contatct">
-                <div id="footer-contatct-email">                
+                <div id="footer-contact-email">                
                     <img src='/Assets/Footer/email.png' alt="Email"/>
                     <p>ENTRE EM CONTATO</p>
                 </div>

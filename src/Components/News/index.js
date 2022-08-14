@@ -46,6 +46,8 @@ export default function News(props){
 
     function reset(){
         setValidForm(false)
+        setName("")
+        setEmail("")
     }
     return(
         <section id="news-section">
