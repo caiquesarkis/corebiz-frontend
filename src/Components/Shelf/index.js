@@ -10,6 +10,7 @@ export default function Shelf(props){
         if (data != null){
             setProducts(data)
         }
+        console.log(data)
     })
     },[])
    

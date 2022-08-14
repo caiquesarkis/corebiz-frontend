@@ -3,7 +3,6 @@ import { useState } from 'react'
 import axios from "axios"
 
 export default function News(props){
-
     const [validForm, setValidForm] = useState(false);
     const [name, setName] = useState("");
     const [nameErro, setNameErro] = useState(false);
@@ -11,24 +10,30 @@ export default function News(props){
     const [emailErro, setEmailErro] = useState(false);
     
     function sendEmail(){
-        if (name === ""){
-            setNameErro(true);
-        }if (email === "") {
-            setEmailErro(true);
+        if(name === ""){
+            setNameErro(true)
         } else{
+            setNameErro(false)
+        }
+
+        if(email === "" || !(/\S+@\S+\.\S+/.test(email))){
+            setEmailErro(true)
+        } else{
+            setEmailErro(false)
+        }
+        
+        if (!(nameErro && emailErro)){
             const info = {
                 name : name,
                 email : email
             }
             axios.post("https://corebiz-test.herokuapp.com/api/v1/newsletter", info).then( response => {
                 console.log(response)
+                setValidForm(true)
             }).catch( err => {
-                setEmailErro(true);
-                setNameErro(true);
+                console.log("Couldn't subscribe'")
             })
-
-            setValidForm(true)
-        }
+        } 
     }
 
     function handleName(e){

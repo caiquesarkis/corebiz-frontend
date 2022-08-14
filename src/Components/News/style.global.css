@@ -141,4 +141,8 @@
    #news-form-submit-button{
         width: 288px;
    }
+
+   .news-error-text{
+        margin-top: -20px;
+   }
 }
